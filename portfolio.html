@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        
+        .skill-bar {
+            transition: width 1.5s ease-out;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+        
+        /* Dark mode toggle styles */
+        .dark-toggle {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        
+        .dark-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #374151;
+            transition: .4s;
+            border-radius: 30px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #3b82f6;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-blue-600 dark:text-blue-400">Portfolio</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#education" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Education</a>
+                        <a href="#testimonials" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Testimonials</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <label class="dark-toggle mr-4">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <button class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Experience</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Education</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Testimonials</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-600 dark:text-blue-400">Rajit Palit Atri</span></h1>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-gray-600 dark:text-gray-300">Electrical and Electronics Engineer</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg">I specialize in designing control and instrumentation systems that drive efficiency and innovation across industries.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contact Me</a>
+                    <a href="#projects" class="border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 px-6 py-3 rounded-lg font-medium transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-800">View Work</a>
+                </div>
+                <div class="flex mt-8 space-x-4">
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center fade-in delay-1">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-blue-600 dark:border-blue-400 shadow-xl">
+                    <img src="img\RAJIT_PIC.jpg" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 fade-in">About <span class="text-blue-600 dark:text-blue-400">Me</span></h2>
+            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Get to know me better</p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center fade-in delay-2">
+                <div class="relative w-64 h-64 rounded-xl overflow-hidden shadow-lg">
+                    <img src="img\RAJIT_PIC.jpg" alt="About" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="md:w-2/3 md:pl-12 fade-in delay-3">
+                <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">I'm a passionate Electrical and Electronics Engineer with hands-on experience through an internship at a power station. I have a solid foundation in power systems, circuit design, and control systems, and I'm eager to apply my technical knowledge and problem-solving skills to real-world engineering challenges.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h4 class="font-medium mb-2">Name: <span class="text-gray-600 dark:text-gray-300 font-normal">Rajit Palit Atri</span></h4>
+                        <h4 class="font-medium mb-2">Email: <span class="text-gray-600 dark:text-gray-300 font-normal">rajitpalitatri@gmail.com </span></h4>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">From: <span class="text-gray-600 dark:text-gray-300 font-normal">Chattogram, Bangladesh</span></h4>
+                        <h4 class="font-medium mb-2">Freelance: <span class="text-gray-600 dark:text-gray-300 font-normal">Available</span></h4>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition duration-300">Download CV</a>
+                    <a href="#contact" class="border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 px-6 py-2 rounded-lg font-medium transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-700">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Projects</span></h2>
+            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Some of my recent work</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 fade-in delay-2">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">A full-featured online store with payment integration and inventory management.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">React</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Node.js</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">MongoDB</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 fade-in delay-3">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">A productivity application for teams to collaborate and manage projects.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Vue.js</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Firebase</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">TailwindCSS</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 fade-in delay-4">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">A responsive portfolio website for a photographer showcasing their work.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">GSAP</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
+                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12 fade-in delay-4">
+            <a href="#" class="inline-block border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 px-6 py-3 rounded-lg font-medium transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-800">View All Projects</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Skills</span></h2>
+            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Technologies I work with</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="fade-in delay-2">
+                <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">HTML/CSS</span>
+                        <span class="text-gray-600 dark:text-gray-300">95%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">JavaScript</span>
+                        <span class="text-gray-600 dark:text-gray-300">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">React</span>
+                        <span class="text-gray-600 dark:text-gray-300">85%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">Vue.js</span>
+                        <span class="text-gray-600 dark:text-gray-300">80%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fade-in delay-3">
+                <h3 class="text-xl font-semibold mb-6">Backend Development</h3>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">Node.js</span>
+                        <span class="text-gray-600 dark:text-gray-300">88%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">Express</span>
+                        <span class="text-gray-600 dark:text-gray-300">85%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">MongoDB</span>
+                        <span class="text-gray-600 dark:text-gray-300">82%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 82%"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-medium">Python/Django</span>
+                        <span class="text-gray-600 dark:text-gray-300">75%</span>
+                    </div>
+                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-12 fade-in delay-4">
+            <h3 class="text-xl font-semibold mb-6 text-center">Other Skills</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
+                    <i class="fab fa-git-alt text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
+                    <span>Git</span>
+                </div>
+                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
+                    <i class="fas fa-server text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
+                    <span>AWS</span>
+                </div>
+                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
+                    <i class="fas fa-database text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
+                    <i class="fas fa-mobile-alt text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
+                    <span>Responsive Design</span>
+                </div>
+                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
+                    <i class="fas fa-paint-brush text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
+                    <span>UI/UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 fade-in">Work <span class="text-blue-600 dark:text-blue-400">Experience</span></h2>
+            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">My professional journey</p>
+        </div>
+        
+        <div class="relative">
+            <!-- Timeline -->
+            <div class="border-l-2 border-blue-600 dark:border-blue-400 absolute h-full left-1/2 transform -translate-x-1/2 md:left-4 md:translate-x-0"></div>
+            
+            <div class="space-y-8">
+                <!-- Experience 1 -->
+                <div class="relative fade-in delay-2">
+                    <div class="md:flex items-center w-full">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                            <div class="md:inline-block bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-semibold">Intern</h3>
+                                <p class="text-blue-600 dark:text-blue-400">Zodiac Power Chittagong Ltd. (ZPCL)</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">3rd March 2024 - 3rd May 2024</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-8 h-8 absolute left-1/2 transform -translate-x-1/2 bg-blue-600 dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-800"></div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+                                <p class="text-gray-600 dark:text-gray-300">Contributed to the operation and maintenance of key power plant systems, including HFO, lube oil, and water circulation systems. Gained hands-on experience with steam turbines, boilers, and transformers. Assisted in troubleshooting and improving system performance, collaborating with engineers to enhance operational efficiency. Improved single-line diagrams for electrical systems and developed insights into power plant electrical operations and maintenance.</p>
+                                <div class="mt-3 flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">React</span>
+                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
+                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">Redux</span>
+                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">Jest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Education</span></h2>
+            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">My academic background</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Education 1 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-2">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Bachelor of Science</h3>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">July 2020-July 2024</p>
+                    </div>
+                </div>
+                <h4 class="font-medium mb-2">Electrical and Electronics Engineering</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">AMERICAN INTERNATIONAL UNIVERSITY- BANGLADESH (AIUB)</p>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Specialized in Artificial Intelligence and Machine Learning. Thesis on Neural Networks for Image Recognition.</p>
+            </div>
+            
+            <!-- Education 2 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-3">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Higher Secondary Certificate (H.S.C)</h3>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">July 2017–July 2019</p>
+                    </div>
+                </div>
+                <h4 class="font-medium mb-2">Science</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">CHATTAGRAM BIGGAN COLLEGE, CHATTAGRAM</p>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Focus on Web Development and Database Systems. Graduated with honors.</p>
+            </div>
+            
+            <!-- Education 3 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-4">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Secondary School Certificate (S.S.C)</h3>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">January 2015-June 2017</p>
+                    </div>
+                </div>
+                <h4 class="font-medium mb-2">Science</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">CHATTAGRAM METROPOLITAN POLICE SCHOOL & COLLEGE, CHATTAGRAM</p>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">AWS Certified Developer, Google Analytics Certification, Advanced React Patterns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 fade-in">Client <span class="text-blue-600 dark:text-blue-400">Testimonials</span></h2>
+            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">What people say about my work</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in delay-2">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Client" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Sarah Johnson</h4>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">CEO, TechStart</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">"John transformed our outdated website into a modern, responsive platform that increased our conversion rate by 35%. His attention to detail and problem-solving skills are exceptional."</p>
+                <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in delay-3">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Client" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Michael Chen</h4>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">CTO, Digital Solutions</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">"Working with John was a pleasure. He delivered our e-commerce platform ahead of schedule and under budget. His technical expertise and communication skills are top-notch."</p>
+                <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in delay-4">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Client" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Emily Rodriguez</h4>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">Marketing Director, BrandWorks</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">"John's ability to understand our brand needs and translate them into a beautiful, functional website was impressive. He's responsive, professional, and truly talented."</p>
+                <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 fade-in">Get In <span class="text-blue-600 dark:text-blue-400">Touch</span></h2>
+            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Feel free to reach out for collaborations or just a friendly hello</p>
+        </div>
+        
+        <div class="flex flex-col md:flex-row fade-in delay-2">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">I'm available for freelance work and full-time positions. Let's discuss how I can help with your project.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                            <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Email</h4>
+                            <a href="mailto:john@example.com" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">rajitpalitatri@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                            <i class="fas fa-phone-alt text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Phone</h4>
+                            <a href="tel:+880-1923691891" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">+880-1923691891</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Location</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Chattogram, Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="font-medium mb-4">Follow Me</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-4">Rajit Palit Atri</h3>
+                    <p class="mb-4">Electrical and Electronics Engineer passionate about designing efficient, reliable, and technology-driven electrical systems and solutions..</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#projects" class="hover:text-white transition duration-300">Projects</a></li>
+                        <li><a href="#skills" class="hover:text-white transition duration-300">Skills</a></li>
+                        <li><a href="#contact" class="hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Newsletter</h4>
+                    <p class="mb-4">Subscribe to my newsletter for the latest updates and articles.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 Rajit Palit Atri. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved user preference or use system preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            darkModeToggle.checked = true;
+        }
+        
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                html.classList.add('dark');
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                html.classList.remove('dark');
+                localStorage.setItem('darkMode', 'false');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Highlight active navigation link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Animate skill bars on scroll
+        const skillBars = document.querySelectorAll('.skill-bar');
+        
+        function animateSkillBars() {
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'skills') {
+                        animateSkillBars();
+                    }
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
