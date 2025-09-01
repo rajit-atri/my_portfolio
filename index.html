@@ -115,6 +115,16 @@
         input:checked + .slider:before {
             transform: translateX(30px);
         }
+
+        /* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
@@ -129,11 +139,11 @@
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Home</a>
                         <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">About</a>
-                        <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Projects</a>
-                        <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Skills</a>
-                        <a href="#experience" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Experience</a>
                         <a href="#education" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Education</a>
-                        <a href="#testimonials" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Testimonials</a>
+                        <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#Work_Experience" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Work Experience</a>
+                        <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#achievments" class="nav-link text-gray-700 dark:text-gray-300 px-3 py-2 text-sm font-medium">Achievments</a>
                     </div>
                 </div>
                 <div class="flex items-center">
@@ -155,11 +165,11 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Experience</a>
                 <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Education</a>
-                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Testimonials</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
+                <a href="#Work_Experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Work Experience</a>
+                <a href="#Projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+                <a href="#achievments" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Achievments</a>
             </div>
         </div>
     </nav>
@@ -170,17 +180,48 @@
             <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-600 dark:text-blue-400">Rajit Palit Atri</span></h1>
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-gray-600 dark:text-gray-300">Electrical and Electronics Engineer</h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg">I specialize in designing control and instrumentation systems that drive efficiency and innovation across industries.</p>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg">Graduate Research Aspirant in Power & VLSI Systems
+Committed to advancing intelligent and sustainable technologies.</p>
                 <div class="flex space-x-4">
                     <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contact Me</a>
                     <a href="#projects" class="border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 px-6 py-3 rounded-lg font-medium transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-800">View Work</a>
                 </div>
+
+                
                 <div class="flex mt-8 space-x-4">
-                    <a href="https://github.com/rajit-atri" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/rajit-palit-atri-500b8b2a9/" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl"><i class="fab fa-instagram"></i></a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/rajit-palit-atri-500b8b2a9/" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <!-- ORCID -->
+                <a href="https://orcid.org/0009-0009-7813-7983" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 text-2xl">
+                    <i class="fas fa-id-badge"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/rajit-atri" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <!-- Google Scholar -->
+                <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F5AAMzdyTiUyRrnXYhIjm0jd8NWKvFCdraukICcJKSB_g8UI-EBFcs6Ex40xjVuoFc-mp_-NkXBMuCxgLnTARJ-uQxjng&user=PDLihMIAAAAJ"
+                    target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+
+                <!-- ResearchGate -->
+                <a href="https://www.researchgate.net/profile/Rajit-Atri" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 text-2xl">
+                    <i class="fas fa-flask"></i>
+                </a>
                 </div>
+
+
+
             </div>
             <div class="md:w-1/2 flex justify-center fade-in delay-1">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-blue-600 dark:border-blue-400 shadow-xl">
@@ -205,231 +246,245 @@
             </div>
             <div class="md:w-2/3 md:pl-12 fade-in delay-3">
                 <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">I'm a passionate Electrical and Electronics Engineer with hands-on experience through an internship at a power station. I have a solid foundation in power systems, circuit design, and control systems, and I'm eager to apply my technical knowledge and problem-solving skills to real-world engineering challenges.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify">
+  I am Rajit Palit Atri, an Electrical and Electronic Engineering graduate from the American International University–Bangladesh. My academic and project experiences cover power systems, VLSI design, and image processing-based applications. I gained practical exposure through my internship at Zodiac Power Chittagong Ltd., where I worked with large-scale power plant operations.
+  <br><br>
+  Alongside academics, I have been actively involved in ESAB, contributing to leadership, design, and teamwork initiatives. My objective is to advance into graduate research in power systems and semiconductors, with the vision of developing sustainable and intelligent engineering solutions.
+</p>
+               
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     <div>
                         <h4 class="font-medium mb-2">Name: <span class="text-gray-600 dark:text-gray-300 font-normal">Rajit Palit Atri</span></h4>
-                        <h4 class="font-medium mb-2">Email: <span class="text-gray-600 dark:text-gray-300 font-normal">rajitpalitatri@gmail.com </span></h4>
-                    </div>
-                    <div>
+                        <h4 class="font-medium mb-2">
+  Email: 
+  <a href="mailto:rajit.palit@gmail.com" class="text-gray-600 dark:text-gray-300 font-normal hover:underline">
+    rajit.palit@gmail.com
+  </a>
+</h4>
+                                    
                         <h4 class="font-medium mb-2">From: <span class="text-gray-600 dark:text-gray-300 font-normal">Chattogram, Bangladesh</span></h4>
-                        <h4 class="font-medium mb-2">Freelance: <span class="text-gray-600 dark:text-gray-300 font-normal">Available</span></h4>
                     </div>
                 </div>
                 
                 <div class="flex flex-wrap gap-4">
                     <a href="Files\Rajit_Palit_Atri_CV.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition duration-300">Show CV</a>
-                    <a href="#contact" class="border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 px-6 py-2 rounded-lg font-medium transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-700">Hire Me</a>
+            
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+<section class="mb-12"></section>
+    <!-- Education Section -->
+    <section id="education" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Projects</span></h2>
+            <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Education</span></h2>
             <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Some of my recent work</p>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">My academic background</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 fade-in delay-2">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">A full-featured online store with payment integration and inventory management.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">React</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Node.js</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">MongoDB</span>
+            <!-- Education 1 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-2">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
                     </div>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Source Code</a>
+                    <div>
+                        <h3 class="text-lg font-semibold">Bachelor of Science</h3>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">July 2020-September 2024</p>
                     </div>
                 </div>
+                <h4 class="font-medium mb-2">Electrical and Electronics Engineering</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">AMERICAN INTERNATIONAL UNIVERSITY- BANGLADESH (AIUB)</p>
+                <!--<p class="text-gray-600 dark:text-gray-300 text-sm">Specialized in Artificial Intelligence and Machine Learning. Thesis on Neural Networks for Image Recognition.</p>-->
             </div>
             
-            <!-- Project 2 -->
-            <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 fade-in delay-3">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">A productivity application for teams to collaborate and manage projects.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Vue.js</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Firebase</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">TailwindCSS</span>
+            <!-- Education 2 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-3">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
                     </div>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Source Code</a>
+                    <div>
+                        <h3 class="text-lg font-semibold">Higher Secondary Certificate (H.S.C)</h3>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">July 2017–July 2019</p>
                     </div>
                 </div>
+                <h4 class="font-medium mb-2">Science</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">CHATTAGRAM BIGGAN COLLEGE, CHATTAGRAM</p>
+                <!--<p class="text-gray-600 dark:text-gray-300 text-sm">Focus on Web Development and Database Systems. Graduated with honors.</p> -->
             </div>
             
-            <!-- Project 3 -->
-            <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 fade-in delay-4">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">A responsive portfolio website for a photographer showcasing their work.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">JavaScript</span>
-                        <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">GSAP</span>
+            <!-- Education 3 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-4">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
                     </div>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
-                        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Source Code</a>
+                    <div>
+                        <h3 class="text-lg font-semibold">Secondary School Certificate (S.S.C)</h3>
+                        <p class="text-blue-600 dark:text-blue-400 text-sm">January 2015-June 2017</p>
                     </div>
                 </div>
+                <h4 class="font-medium mb-2">Science</h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">CHATTAGRAM METROPOLITAN POLICE SCHOOL & COLLEGE, CHATTAGRAM</p>
+                <!--<p class="text-gray-600 dark:text-gray-300 text-sm">AWS Certified Developer, Google Analytics Certification, Advanced React Patterns.</p>-->
             </div>
-        </div>
-        
-        <div class="text-center mt-12 fade-in delay-4">
-            <a href="#" class="inline-block border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 px-6 py-3 rounded-lg font-medium transition duration-300 hover:bg-blue-50 dark:hover:bg-gray-800">View All Projects</a>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
+<section class="mb-12"></section>
+<!-- Skills Section -->
+        <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Skills</span></h2>
             <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Technologies I work with</p>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Technologies and expertise I work with</p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="fade-in delay-2">
-                <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">HTML/CSS</span>
-                        <span class="text-gray-600 dark:text-gray-300">95%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 95%"></div>
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">JavaScript</span>
-                        <span class="text-gray-600 dark:text-gray-300">90%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">React</span>
-                        <span class="text-gray-600 dark:text-gray-300">85%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 85%"></div>
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">Vue.js</span>
-                        <span class="text-gray-600 dark:text-gray-300">80%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 80%"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="fade-in delay-3">
-                <h3 class="text-xl font-semibold mb-6">Backend Development</h3>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">Node.js</span>
-                        <span class="text-gray-600 dark:text-gray-300">88%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 88%"></div>
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">Express</span>
-                        <span class="text-gray-600 dark:text-gray-300">85%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 85%"></div>
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">MongoDB</span>
-                        <span class="text-gray-600 dark:text-gray-300">82%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 82%"></div>
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <div class="flex justify-between mb-2">
-                        <span class="font-medium">Python/Django</span>
-                        <span class="text-gray-600 dark:text-gray-300">75%</span>
-                    </div>
-                    <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                        <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 75%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mt-12 fade-in delay-4">
-            <h3 class="text-xl font-semibold mb-6 text-center">Other Skills</h3>
-            <div class="flex flex-wrap justify-center gap-4">
-                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
-                    <i class="fab fa-git-alt text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
-                    <span>Git</span>
-                </div>
-                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
-                    <i class="fas fa-server text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
-                    <span>AWS</span>
-                </div>
-                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
-                    <i class="fas fa-database text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
-                    <span>SQL</span>
-                </div>
-                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
-                    <i class="fas fa-mobile-alt text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
-                    <span>Responsive Design</span>
-                </div>
-                <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center">
-                    <i class="fas fa-paint-brush text-2xl mr-3 text-gray-700 dark:text-gray-300"></i>
-                    <span>UI/UX</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- Technical & Programming -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Technical Skills -->
+            <div class="fade-in delay-2">
+            <h3 class="text-xl font-semibold mb-6">Technical Skills</h3>
+
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">Power Systems Analysis</span>
+                <span class="text-gray-600 dark:text-gray-300">Intermediate</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">VLSI Design & Simulation</span>
+                <span class="text-gray-600 dark:text-gray-300">Intermediate</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">Digital & Analog Circuit Design</span>
+                <span class="text-gray-600 dark:text-gray-300">Intermediate</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">Embedded Systems & IoT</span>
+                <span class="text-gray-600 dark:text-gray-300">Intermediate</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">Image Processing & OCR</span>
+                <span class="text-gray-600 dark:text-gray-300">Intermediate</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">Machine Learning (Engineering Applications)</span>
+                <span class="text-gray-600 dark:text-gray-300">Beginner</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 30%"></div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Programming -->
+            <div class="fade-in delay-3">
+            <h3 class="text-xl font-semibold mb-6">Programming</h3>
+
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">Python</span>
+                <span class="text-gray-600 dark:text-gray-300">Intermediate</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">C / C++</span>
+                <span class="text-gray-600 dark:text-gray-300">Intermediate</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between mb-2">
+                <span class="font-medium">VHDL</span>
+                <span class="text-gray-600 dark:text-gray-300">Beginner</span>
+                </div>
+                <div class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="skill-bar bg-blue-600 dark:bg-blue-400 h-2.5 rounded-full" style="width: 30%"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Research & Tools -->
+        <div class="mt-12 fade-in delay-4">
+            <h3 class="text-xl font-semibold mb-6 text-center">Research & Tools</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white dark:bg-gray-700 px-6 py-4 rounded-lg shadow-md text-center">
+                <span class="block font-medium">MATLAB/Simulink</span>
+                <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            <div class="bg-white dark:bg-gray-700 px-6 py-4 rounded-lg shadow-md text-center">
+                <span class="block font-medium">LaTeX (Overleaf)</span>
+                <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            <div class="bg-white dark:bg-gray-700 px-6 py-4 rounded-lg shadow-md text-center">
+                <span class="block font-medium">Proteus Design Suite</span>
+                <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            <div class="bg-white dark:bg-gray-700 px-6 py-4 rounded-lg shadow-md text-center">
+                <span class="block font-medium">AutoCAD (Electrical Drafting)</span>
+                <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="mt-12 fade-in delay-5">
+            <h3 class="text-xl font-semibold mb-6 text-center">Soft Skills</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+            <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md">Team Leadership & Collaboration</div>
+            <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md">Technical Communication</div>
+            <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md">Creative Design (Adobe Illustrator, Photoshop, Canva)</div>
+            </div>
+        </div>
+        </section>
+
+
+
+    <!-- Work Experience Section -->
+    <section id="Work_Experience" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4 fade-in">Work <span class="text-blue-600 dark:text-blue-400">Experience</span></h2>
+            <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Work Experience</span></h2>
             <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
             <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">My professional journey</p>
         </div>
@@ -452,241 +507,546 @@
                         <div class="hidden md:block w-8 h-8 absolute left-1/2 transform -translate-x-1/2 bg-blue-600 dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-800"></div>
                         <div class="md:w-1/2 md:pl-12">
                             <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
-                                <p class="text-gray-600 dark:text-gray-300">Contributed to the operation and maintenance of key power plant systems, including HFO, lube oil, and water circulation systems. Gained hands-on experience with steam turbines, boilers, and transformers. Assisted in troubleshooting and improving system performance, collaborating with engineers to enhance operational efficiency. Improved single-line diagrams for electrical systems and developed insights into power plant electrical operations and maintenance.</p>
-                                <div class="mt-3 flex flex-wrap gap-2">
-                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">React</span>
-                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
-                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">Redux</span>
-                                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">Jest</span>
-                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 mb-6 text-justify">During my internship at ZPCL, I contributed to the operation and maintenance 
+                                    of large-scale power plant systems, including heavy fuel oil (HFO), lube oil, and high-/low-temperature water circulation systems. 
+                                    I gained hands-on experience with steam turbines, boilers, and transformers, assisting in troubleshooting and optimizing performance. 
+                                    Additionally, I worked on single-line diagrams for electrical systems, which enhanced my understanding of power plant electrical operations, protection, and maintenance. 
+                                    This experience strengthened my technical foundation in power systems and plant engineering, while also improving my collaboration skills through close work with senior engineers.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-    <!-- Education Section -->
-    <section id="education" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Education</span></h2>
-            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">My academic background</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Education 1 -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-2">
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
-                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold">Bachelor of Science</h3>
-                        <p class="text-blue-600 dark:text-blue-400 text-sm">July 2020-July 2024</p>
-                    </div>
-                </div>
-                <h4 class="font-medium mb-2">Electrical and Electronics Engineering</h4>
-                <p class="text-gray-600 dark:text-gray-300 mb-3">AMERICAN INTERNATIONAL UNIVERSITY- BANGLADESH (AIUB)</p>
-                <p class="text-gray-600 dark:text-gray-300 text-sm">Specialized in Artificial Intelligence and Machine Learning. Thesis on Neural Networks for Image Recognition.</p>
-            </div>
-            
-            <!-- Education 2 -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-3">
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
-                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold">Higher Secondary Certificate (H.S.C)</h3>
-                        <p class="text-blue-600 dark:text-blue-400 text-sm">July 2017–July 2019</p>
-                    </div>
-                </div>
-                <h4 class="font-medium mb-2">Science</h4>
-                <p class="text-gray-600 dark:text-gray-300 mb-3">CHATTAGRAM BIGGAN COLLEGE, CHATTAGRAM</p>
-                <p class="text-gray-600 dark:text-gray-300 text-sm">Focus on Web Development and Database Systems. Graduated with honors.</p>
-            </div>
-            
-            <!-- Education 3 -->
-            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg fade-in delay-4">
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
-                        <i class="fas fa-graduation-cap text-blue-600 dark:text-blue-400 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold">Secondary School Certificate (S.S.C)</h3>
-                        <p class="text-blue-600 dark:text-blue-400 text-sm">January 2015-June 2017</p>
-                    </div>
-                </div>
-                <h4 class="font-medium mb-2">Science</h4>
-                <p class="text-gray-600 dark:text-gray-300 mb-3">CHATTAGRAM METROPOLITAN POLICE SCHOOL & COLLEGE, CHATTAGRAM</p>
-                <p class="text-gray-600 dark:text-gray-300 text-sm">AWS Certified Developer, Google Analytics Certification, Advanced React Patterns.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4 fade-in">Client <span class="text-blue-600 dark:text-blue-400">Testimonials</span></h2>
-            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">What people say about my work</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in delay-2">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Client" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Sarah Johnson</h4>
-                        <p class="text-blue-600 dark:text-blue-400 text-sm">CEO, TechStart</p>
-                    </div>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">"John transformed our outdated website into a modern, responsive platform that increased our conversion rate by 35%. His attention to detail and problem-solving skills are exceptional."</p>
-                <div class="flex text-yellow-400">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-            
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in delay-3">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Client" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Michael Chen</h4>
-                        <p class="text-blue-600 dark:text-blue-400 text-sm">CTO, Digital Solutions</p>
-                    </div>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">"Working with John was a pleasure. He delivered our e-commerce platform ahead of schedule and under budget. His technical expertise and communication skills are top-notch."</p>
-                <div class="flex text-yellow-400">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-            
-            <!-- Testimonial 3 -->
-            <div class="testimonial-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg fade-in delay-4">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Client" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <h4 class="font-semibold">Emily Rodriguez</h4>
-                        <p class="text-blue-600 dark:text-blue-400 text-sm">Marketing Director, BrandWorks</p>
-                    </div>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">"John's ability to understand our brand needs and translate them into a beautiful, functional website was impressive. He's responsive, professional, and truly talented."</p>
-                <div class="flex text-yellow-400">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-xl">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4 fade-in">Get In <span class="text-blue-600 dark:text-blue-400">Touch</span></h2>
-            <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-            <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Feel free to reach out for collaborations or just a friendly hello</p>
-        </div>
+    <!-- Projects Section -->
+<section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Projects</span></h2>
+    <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Some of my recent work</p>
+  </div>
+
+  <div class="relative">
+    <!-- Slider Buttons -->
+    <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+     <!--Slider Container -->
+    <div id="projectsSlider" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
         
-        <div class="flex flex-col md:flex-row fade-in delay-2">
-            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">I'm available for freelance work and full-time positions. Let's discuss how I can help with your project.</p>
-                
-                <div class="space-y-4">
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
-                            <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">Email</h4>
-                            <a href="mailto:rajitpalitatri@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">rajitpalitatri@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
-                            <i class="fas fa-phone-alt text-blue-600 dark:text-blue-400"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">Phone</h4>
-                            <a href="tel:+880-1923691891" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">+880-1923691891</a>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
-                            <i class="fas fa-map-marker-alt text-blue-600 dark:text-blue-400"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">Location</h4>
-                            <p class="text-gray-600 dark:text-gray-300">Chattogram, Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-8">
-                    <h4 class="font-medium mb-4">Follow Me</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/rajit-atri" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/rajit-palit-atri-500b8b2a9/" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="bg-white dark:bg-gray-700 p-3 rounded-full text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="md:w-1/2">
-                <form class="space-y-4" action="https://formspree.io/f/xldlknpv" method="POST">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                            <input type="text" name="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
-                            <input type="email" name="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
-                        <input type="text" name="subject" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
-                        <textarea name="message" rows="5" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-100"></textarea>
-                    </div>
-                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full">Send Message</button>
-                </form>
-            </div>
+      
+      <!-- Project 1 -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-48 overflow-hidden">
+          <img src="img/project_1.jpg" alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-110">
         </div>
-    </section>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">IoT Based Smart Poultry Farm and water quality monitoring System</h3>
+                              <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Developed an IoT-enabled system to automate monitoring of poultry farm conditions 
+                        (temperature, humidity, air quality, water purity) with real-time cloud data and mobile app alerts.</p>
+                    <!-- Key Methods / Tools -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+                        <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Arduino / ESP32</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">IoT Protocols (MQTT/HTTP)</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Environmental Sensors</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Cloud Database</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Mobile App Alerts</li>
+                        </ul>
+                    </div>
+                          <!-- Highlights -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Improved operational efficiency and flock health through automation.</li>
+                        <li>Ensured clean water supply and reduced disease risk via continuous quality monitoring.</li>
+                        </ul>
+                    </div>
+          <a href="Project_report/Project_Report_1.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-48 overflow-hidden">
+          <img src="img/project_2.jpg" alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+        </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Digital Stopwatch Using 555 Timer</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Designed and implemented a digital stopwatch circuit capable of counting from 0 to 59 seconds using a 555 Timer IC in astable mode. 
+                        The timer generated precise 1 Hz clock pulses, which were processed through two cascaded counter ICs. The counters fed outputs into BCD-to-7 segment decoders to display elapsed seconds on seven-segment displays.</p>
+                    <!-- Key Methods / Tools -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+                        <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">555 Timer IC (astable mode) </li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Counter ICs (cascaded) (MQTT/HTTP)</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">BCD-to-7 Segment Decoder</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Digital Electronics</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping </li>
+                        </ul>
+                    </div>
+                          <!-- Highlights -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Successfully built a functional hardware prototype capable of accurate second-by-second counting.</li>
+                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
+                        </ul>
+                    </div>
+          <a href="Project_report/Project_Report_2.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-48 overflow-hidden">
+          <img src="img/project_3.jpg" alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+        </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Design and Implementation of a Bluetooth-Based
+Remote Control Car</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Built a battery-powered remote control car that can be operated via a mobile app connected through Bluetooth. 
+                        The system uses ICs and a motor chassis to transmit and receive control signals, enabling smooth directional movement. Designed as a low-cost prototype for robotic applications.</p>
+                    <!-- Key Methods / Tools -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+                        <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Bluetooth module </li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">DC motors and Motor driver ICs </li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Chassis assembly ICs</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Mobile app</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping </li>
+                        </ul>
+                    </div>
+                          <!-- Highlights -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Demonstrated real-time wireless control of a robotic vehicle, gained practical experience in embedded systems and hardware integration, and developed a scalable model for educational robotics.</li>
+                      <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li> -->
+                        </ul>
+                    </div>
+          <a href="Project_report/Project_Report_3.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-48 overflow-hidden">
+          <img src="img/project_4.jpg" alt="Project 4" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+        </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Implementing a Buck Converter to Enhance Power Management in RC Cars</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Built a low-cost Bluetooth-controlled RC car and integrated a buck converter to step down battery voltage for the motor/control circuits. 
+                        The goal was to improve runtime, reduce heat, and stabilize supply rails so the car maintains consistent speed and responsiveness as the battery discharges. Control signals are sent from a mobile app to the onboard receiver and motor driver ICs for precise movement.</p>
+                    <!-- Key Methods / Tools -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+                        <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Buck converter (step-down DC-DC) </li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">DC motors and Motor driver ICs</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Power budgeting (efficiency & thermal checks)</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Chassis assembly ICs</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping </li>
+                        </ul>
+                    </div>
+                          <!-- Highlights -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Converts higher battery voltage (e.g., 7.4–12 V) down to optimal motor/logic rails (e.g., 5 V/3.3 V) with 85–95% efficiency.</li>
+                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
+                        </ul>
+                    </div>
+          <a href="Project_report/Project_Report_4.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-48 overflow-hidden">
+          <img src="img/project_5.jpg" alt="Project 5" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+        </div>
+             <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Designing a 1-Bit 4-to-1 Multiplexer Using 1-Bit 2-to-1 Multiplexers</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Designed a digital circuit for a 1-bit, 4-to-1 multiplexer (MUX) by combining multiple 1-bit, 2-to-1 MUX units. 
+                        The project demonstrates how complex circuits can be built from simpler components to optimize data routing. 
+                        Cadence Virtuoso was used to create the schematic and simulate the design, including transient analysis, DRC, and LVS checks.</p>
+                    <!-- Key Methods / Tools -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+                        <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Cadence Virtuoso </li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">2-to-1 MUX circuit design</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200"> Schematic entry</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Transient analysis</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">DRC (Design Rule Check) & LVS (Layout vs. Schematics) </li>
+                        </ul>
+                    </div>
+                          <!-- Highlights -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Showcased hierarchical digital design by constructing a 4-to-1 MUX from simpler 2-to-1 blocks.</li>
+                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
+                        </ul>
+                    </div>
+          <a href="Project_report/Project_Report_5.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-48 overflow-hidden">
+          <img src="img/project_6.jpg" alt="Project 6" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+        </div>
+                   <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Designing the Physical Layout of a 2-to-1 Multiplexer and Verifying with DRC, ERC, and LVS</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Developed the physical layout of a 2-to-1 multiplexer (MUX) using industry-standard EDA tools as an extension of the earlier schematic design. The project focused on translating logical design into a physical circuit layout while ensuring compliance with fabrication constraints. 
+                        Verification was carried out through Design Rule Check (DRC), Electrical Rule Check (ERC), and Layout vs. Schematic (LVS) to validate accuracy and functionality.</p>
+                    <!-- Key Methods / Tools -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4> Cadence Virtuoso, Physical design workflows, DRC, ERC, LVS, Layout design
+                        <ul class="mt-2 flex flex-wrap gap-2">
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Cadence Virtuoso </li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Physical design workflows</li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200"> DRC (Design Rule Check), LVS (Layout vs. Schematics) & ERC (Electrical Rule Check) </li>
+                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Layout design</li>
+                        
+                        </ul>
+                    </div>
+                          <!-- Highlights -->
+                    <div class="mt-5">
+                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Designed a fabrication-ready physical layout of a 2-to-1 MUX.</li>
+                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
+                        </ul>
+                    </div>
+          <a href="Project_report/Project_Report_6.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    
+<!-- Achievements Section -->
+<section id="achievments" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold mb-4 fade-in">
+      My <span class="text-blue-600 dark:text-blue-400">Certificates & Achievements</span>
+    </h2>
+    <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">
+      A showcase of my academic, professional, and extracurricular accomplishments.
+    </p>
+  </div>
+
+  <!-- ========== ROW 1: Academic Achievements ========== -->
+  <div class="relative mb-12">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-xl font-semibold">Academic Achievements</h3>
+      <div class="space-x-2">
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow1" data-dir="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow1" data-dir="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div id="achRow1" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
+      <!-- Dean’s Award -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/Academic/Deans_Award.jpg" target="_blank">
+            <img src="Achievements/Academic/Deans_Award.jpg" alt="Dean’s Award" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Dean’s Award – AIUB</p></div>
+      </div>
+
+      <!-- Poster Presentation -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/Academic/Poster_AWARD.jpg" target="_blank">
+            <img src="Achievements/Academic/Poster_AWARD.jpg" alt="Poster Award" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Second Best Poster Presentation – Final Year Capstone Project</p></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== ROW 2: Professional Development ========== -->
+  <div class="relative mb-12">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-xl font-semibold">Professional Development</h3>
+      <div class="space-x-2">
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow2" data-dir="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow2" data-dir="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div id="achRow2" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
+      <!-- AutoCAD -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/Autocad/certificate-1744925116058.jpg" target="_blank">
+            <img src="Achievements/Autocad/certificate-1744925116058.jpg" alt="AutoCAD" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">AutoCAD Certificate - Gobeshona Learning Academy</p></div>
+      </div>
+
+      <!-- ML/DL -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/Autocad/ML.JPG" target="_blank">
+            <img src="Achievements/Autocad/ML.JPG" alt="ML/DL" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Python, Machine Learning & Deep Learning - Mahdy Research Academy</p></div>
+      </div>
+
+      <!-- GP Academy - Research Nutshell -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/GP_Certicitaes/RESEARCH NUTSHELL.pdf" target="_blank">
+            <img src="Achievements/GP_Certicitaes/JPG/RESEARCH NUTSHELL.jpg" alt="Research Nutshell" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Research Nutshell – GP Academy</p></div>
+      </div>
+
+      <!-- GP Academy - Paper Reading -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/GP_Certicitaes/RESEARCH PAPER READING STRATEGY.pdf" target="_blank">
+            <img src="Achievements/GP_Certicitaes/JPG/RESEARCH PAPER READING STRATEGY.jpg" alt="Research Paper Reading" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Research Paper Reading Strategy – GP Academy</p></div>
+      </div>
+
+      <!-- GP Academy - Online Safety -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/GP_Certicitaes/ONLINE SAFETY.pdf" target="_blank">
+            <img src="Achievements/GP_Certicitaes/JPG/ONLINE SAFETY.jpg" alt="Online Safety" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Online Safety – GP Academy</p></div>
+      </div>
+
+      <!-- GP Academy - Excel -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/GP_Certicitaes/MS EXCEL BEGINNER TO ADVANCED.pdf" target="_blank">
+            <img src="Achievements/GP_Certicitaes/JPG/MS EXCEL BEGINNER TO ADVANCED.jpg" alt="Excel" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">MS Excel: Beginner to Advanced – GP Academy</p></div>
+      </div>
+
+      <!-- GP Academy - WordPress -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/GP_Certicitaes/INTRODUCTION TO WORDPRESS.pdf" target="_blank">
+            <img src="Achievements/GP_Certicitaes/JPG/INTRODUCTION TO WORDPRESS.jpg" alt="WordPress" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Introduction to WordPress – GP Academy</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ROW 3: Extracurricular & Leadership ========== -->
+  <div class="relative mb-12">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-xl font-semibold">Extracurricular & Leadership</h3>
+      <div class="space-x-2">
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow3" data-dir="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow3" data-dir="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div id="achRow3" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
+      <!-- ESAB Executive -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Commettee/Executive Certificate.jpg" target="_blank">
+            <img src="Achievements/ESAB/Commettee/Executive Certificate.jpg" alt="ESAB Executive" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Executive Committee (Content & Design Lead) – ESAB (2022–2024)</p></div>
+      </div>
+
+      <!-- ESAB Member -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Commettee/Member Certificate.jpg" target="_blank">
+            <img src="Achievements/ESAB/Commettee/Member Certificate.jpg" alt="ESAB Member" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">General Member – ESAB (Science 2021)</p></div>
+      </div>
+
+      <!-- ESAB Volunteer -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Commettee/Volunteer Certificate.jpg" target="_blank">
+            <img src="Achievements/ESAB/Commettee/Volunteer Certificate.jpg" alt="ESAB Volunteer" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Volunteer – ESAB Events & Activities</p></div>
+      </div>
+
+            <!-- ICREST Volunteer -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/Academic/ICREST.jpg" target="_blank">
+            <img src="Achievements/Academic/ICREST.jpg" alt="ICREST Volunteer" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Volunteer – 3rd & 4th ICREST (International Conference on Robotics, Electrical and Signal Processing Techniques), held at AIUB</p></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== ROW 4: Workshops & Seminars ========== -->
+  <div class="relative">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-xl font-semibold">Workshops & Seminars</h3>
+      <div class="space-x-2">
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow4" data-dir="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg" data-target="#achRow4" data-dir="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div id="achRow4" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
+      <!-- LinkedIn Workshop -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Linkedln an Important Step to Success in Career .jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Linkedln an Important Step to Success in Career .jpg" alt="LinkedIn Workshop" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">LinkedIn: An Important Step to Success in Career </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 1st OCtober, 2021</p></div>
+      </div>
+
+      <!-- Solar PV Design -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Professional Solar PV Design .jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Professional Solar PV Design .jpg" alt="Solar PV Design" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Professional Solar PV Design </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 7th & 8th OCtober, 2021 </p></div>
+      </div>
+
+      <!-- Arduino -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Fundamentals of Arduino .jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Fundamentals of Arduino .jpg" alt="Arduino Workshop" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Fundamentals of Arduino </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 2nd February, 2022 </p></div>
+      </div>
+
+      <!-- Research Paper Publication -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Writing Research Paper for Journal Publication.jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Writing Research Paper for Journal Publication.jpg" alt="Research Paper Writing" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Writing Research Paper for Journal Publication </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 26th February, 2022</p></div>
+      </div>
+
+      <!-- Research Paper Editing -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Research Paper Writing and Editing Few Points .jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Research Paper Writing and Editing Few Points .jpg" alt="Research Editing" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Research Paper Writing & Editing: Few Points </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 18th September, 2022</p></div>
+      </div>
+
+      <!-- Industrial Automation -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Industrial Automation Project and Career .jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Industrial Automation Project and Career .jpg" alt="Industrial Automation" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Industrial Automation Project and Career</p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 20th OCtober, 2022 </p></div>
+      </div>
+
+      <!-- Academic CV & SOP -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Academic CV & SOP Writing .jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Academic CV & SOP Writing .jpg" alt="CV & SOP" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Academic CV & SOP Writing </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 16th OCtober, 2022</p></div>
+      </div>
+
+      <!-- Hybrid Energy Systems -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Modeling and Performance Analysis of Hybrid Energy Systems.jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Modeling and Performance Analysis of Hybrid Energy Systems.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Modeling and Performance Analysis of Hybrid Energy Systems Using PSCAD Software </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 19th October, 2023 </p></div>
+      </div>
+
+      <!-- Robotics -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Fundamental Of Robotics Localization and Manipulation.jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Fundamental Of Robotics Localization and Manipulation.jpg" alt="Robotics" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Fundamentals of Robotics Localization & Manipulation </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 17th December, 2023 </p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
@@ -694,35 +1054,59 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
                     <h3 class="text-xl font-bold text-white mb-4">Rajit Palit Atri</h3>
-                    <p class="mb-4">Electrical and Electronics Engineer passionate about designing efficient, reliable, and technology-driven electrical systems and solutions..</p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/rajit-atri" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/rajit-palit-atri-500b8b2a9/" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <p class="mb-4">Electrical and Electronics Engineer | Graduate Research Aspirant in Power & VLSI Systems
+Committed to advancing intelligent and sustainable technologies.</p>
+                    
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <h4 class="text-lg font-semibold text-white mb-4">Research & Interests</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
+                        <li>Power Systems</li>
+                        <li>VLSI & Semiconductors</li>
+                        <li>ML in Communication</li>
+                        <li>Image Processing & IoT</li> 
+                      <!--  <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
                         <li><a href="#about" class="hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#projects" class="hover:text-white transition duration-300">Projects</a></li>
+                        <li><a href="#education" class="hover:text-white transition duration-300">Education</a></li>
                         <li><a href="#skills" class="hover:text-white transition duration-300">Skills</a></li>
-                        <li><a href="#contact" class="hover:text-white transition duration-300">Contact</a></li>
+                        <li><a href="#certificates" class="hover:text-white transition duration-300">Certificates</a></li> -->
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold text-white mb-4">Newsletter</h4>
-                    <p class="mb-4">Subscribe to my newsletter for the latest updates and articles.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                    <h4 class="text-lg font-semibold text-white mb-4">Check My Social Links</h4>
+<div class="flex space-x-4">
+                            <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/rajit-palit-atri-500b8b2a9/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <!-- ORCID -->
+                        <a href="https://orcid.org/0009-0009-7813-7983" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 text-2xl">
+                            <i class="fas fa-id-badge"></i>
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/rajit-atri" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <!-- Google Scholar -->
+                        <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AJsN-F5AAMzdyTiUyRrnXYhIjm0jd8NWKvFCdraukICcJKSB_g8UI-EBFcs6Ex40xjVuoFc-mp_-NkXBMuCxgLnTARJ-uQxjng&user=PDLihMIAAAAJ"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-2xl">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                        <!-- ResearchGate -->
+                        <a href="https://www.researchgate.net/profile/Rajit-Atri" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 text-2xl">
+                            <i class="fas fa-flask"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             
@@ -843,6 +1227,30 @@
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
+
+          const slider = document.getElementById('projectsSlider');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -350, behavior: 'smooth' });
+  });
+  nextBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: 350, behavior: 'smooth' });
+  });
+
+ 
+  document.querySelectorAll('.slider-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.querySelector(btn.getAttribute('data-target'));
+      if (!target) return;
+      const dir = btn.getAttribute('data-dir');
+      const step = 350;
+      target.scrollBy({ left: dir === 'prev' ? -step : step, behavior: 'smooth' });
+    });
+  });
+
+
     </script>
 </body>
 </html>
