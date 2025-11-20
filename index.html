@@ -530,230 +530,373 @@
     </section>
 
 
-<!-- Projects Section -->
+<!-- Projects Section OLD-->
+ 
+<!-- Projects Section NEW-->
 <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
   <div class="text-center mb-12">
-    <h2 class="text-3xl font-bold mb-4 fade-in">My <span class="text-blue-600 dark:text-blue-400">Projects</span></h2>
+    <h2 class="text-3xl font-bold mb-4 fade-in">
+      My <span class="text-blue-600 dark:text-blue-400">Projects</span>
+    </h2>
     <div class="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
-    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Some of my recent work</p>
+    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">
+      Some of my undergraduate course projects
+    </p>
   </div>
 
   <div class="relative">
     <!-- Slider Buttons -->
-    <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
+    <button id="prevBtn" type="button" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
       <i class="fas fa-chevron-left"></i>
     </button>
-    <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
+    <button id="nextBtn" type="button" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
       <i class="fas fa-chevron-right"></i>
     </button>
 
-     <!--Slider Container -->
+    <!-- Slider Container -->
     <div id="projectsSlider" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
-        
-      
+
       <!-- Project 1 -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-        <div class="h-48 overflow-hidden">
+      <div class="project-card min-w-[260px] max-w-sm bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-40 overflow-hidden">
           <img src="img/project_1.jpg" alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-110">
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">IoT Based Smart Poultry Farm and water quality monitoring System</h3>
-                              <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Developed an IoT-enabled system to automate monitoring of poultry farm conditions 
-                        (temperature, humidity, air quality, water purity) with real-time cloud data and mobile app alerts.</p>
-                    <!-- Key Methods / Tools -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
-                        <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Arduino / ESP32</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">IoT Protocols (MQTT/HTTP)</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Environmental Sensors</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Cloud Database</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Mobile App Alerts</li>
-                        </ul>
-                    </div>
-                          <!-- Highlights -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
-                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Improved operational efficiency and flock health through automation.</li>
-                        <li>Ensured clean water supply and reduced disease risk via continuous quality monitoring.</li>
-                        </ul>
-                    </div>
-          <a href="Project_report/Project_Report_1.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1">
+            IoT Based Smart Poultry Farm and Water Quality Monitoring
+          </h3>
+          <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            Undergraduate Project
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            IoT-enabled monitoring of poultry farm environment and water quality with real-time cloud data and alerts.
+          </p>
+
+          <!-- Toggle Button -->
+          <button
+            class="project-toggle-btn inline-flex items-center text-xs font-semibold bg-blue-600 text-white px-3 py-1.5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+            View details
+          </button>
+
+          <!-- Hidden Details -->
+          <div class="project-details mt-4 hidden">
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Developed an IoT-enabled system to automate monitoring of poultry farm conditions
+              (temperature, humidity, air quality, water purity) with real-time cloud data and
+              mobile app alerts.
+            </p>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Arduino / ESP32</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">IoT Protocols (MQTT/HTTP)</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Environmental Sensors</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Cloud Database</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Mobile App Alerts</li>
+              </ul>
+            </div>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+              <ul class="mt-2 list-disc pl-4 text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Improved operational efficiency and flock health through automation.</li>
+                <li>Reduced disease risk via continuous water quality monitoring.</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a href="Project_report/Project_Report_1.pdf" target="_blank"
+                 class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+                Project Report
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Project 2 -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-        <div class="h-48 overflow-hidden">
+      <div class="project-card min-w-[260px] max-w-sm bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-40 overflow-hidden">
           <img src="img/project_2.jpg" alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-110">
         </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Digital Stopwatch Using 555 Timer</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Designed and implemented a digital stopwatch circuit capable of counting from 0 to 59 seconds using a 555 Timer IC in astable mode. 
-                        The timer generated precise 1 Hz clock pulses, which were processed through two cascaded counter ICs. The counters fed outputs into BCD-to-7 segment decoders to display elapsed seconds on seven-segment displays.</p>
-                    <!-- Key Methods / Tools -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
-                        <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">555 Timer IC (astable mode) </li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Counter ICs (cascaded) (MQTT/HTTP)</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">BCD-to-7 Segment Decoder</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Digital Electronics</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping </li>
-                        </ul>
-                    </div>
-                          <!-- Highlights -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
-                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Successfully built a functional hardware prototype capable of accurate second-by-second counting.</li>
-                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
-                        </ul>
-                    </div>
-          <a href="Project_report/Project_Report_2.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1">Digital Stopwatch Using 555 Timer</h3>
+          <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            Undergraduate Project
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            Hardware stopwatch (0–59 s) using 555 timer, cascaded counters and 7-segment displays.
+          </p>
+
+          <button
+            class="project-toggle-btn inline-flex items-center text-xs font-semibold bg-blue-600 text-white px-3 py-1.5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+            View details
+          </button>
+
+          <div class="project-details mt-4 hidden">
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Designed and implemented a digital stopwatch circuit capable of counting from 0 to 59 seconds
+              using a 555 Timer IC in astable mode. The timer generated precise 1 Hz clock pulses, processed
+              through cascaded counter ICs and BCD-to-7 segment decoders.
+            </p>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">555 Timer IC (astable)</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Cascaded Counter ICs</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">BCD-to-7 Segment Decoder</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Digital Electronics</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping</li>
+              </ul>
+            </div>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+              <ul class="mt-2 list-disc pl-4 text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Built an accurate, hardware-based stopwatch prototype.</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a href="Project_report/Project_Report_2.pdf" target="_blank"
+                 class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+                Project Report
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Project 3 -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-        <div class="h-48 overflow-hidden">
+      <div class="project-card min-w-[260px] max-w-sm bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-40 overflow-hidden">
           <img src="img/project_3.jpg" alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-110">
         </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Design and Implementation of a Bluetooth-Based
-Remote Control Car</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Built a battery-powered remote control car that can be operated via a mobile app connected through Bluetooth. 
-                        The system uses ICs and a motor chassis to transmit and receive control signals, enabling smooth directional movement. Designed as a low-cost prototype for robotic applications.</p>
-                    <!-- Key Methods / Tools -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
-                        <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Bluetooth module </li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">DC motors and Motor driver ICs </li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Chassis assembly ICs</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Mobile app</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping </li>
-                        </ul>
-                    </div>
-                          <!-- Highlights -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
-                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Demonstrated real-time wireless control of a robotic vehicle, gained practical experience in embedded systems and hardware integration, and developed a scalable model for educational robotics.</li>
-                      <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li> -->
-                        </ul>
-                    </div>
-          <a href="Project_report/Project_Report_3.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1">
+            Bluetooth-Based Remote Control Car
+          </h3>
+          <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            Undergraduate Project
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            Mobile-controlled RC car using Bluetooth, motor drivers and low-cost chassis.
+          </p>
+
+          <button
+            class="project-toggle-btn inline-flex items-center text-xs font-semibold bg-blue-600 text-white px-3 py-1.5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+            View details
+          </button>
+
+          <div class="project-details mt-4 hidden">
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Built a battery-powered remote control car operated via a Bluetooth-connected mobile app.
+              Control signals are transmitted to motor driver ICs for smooth directional movement, designed as
+              a low-cost prototype for educational robotics.
+            </p>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Bluetooth Module</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">DC Motors & Driver ICs</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Chassis Assembly</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Mobile App Control</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping</li>
+              </ul>
+            </div>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+              <ul class="mt-2 list-disc pl-4 text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Demonstrated real-time wireless control of a robotic vehicle.</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a href="Project_report/Project_Report_3.pdf" target="_blank"
+                 class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+                Project Report
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Project 4 -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-        <div class="h-48 overflow-hidden">
+      <div class="project-card min-w-[260px] max-w-sm bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-40 overflow-hidden">
           <img src="img/project_4.jpg" alt="Project 4" class="w-full h-full object-cover transition duration-500 hover:scale-110">
         </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Implementing a Buck Converter to Enhance Power Management in RC Cars</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Built a low-cost Bluetooth-controlled RC car and integrated a buck converter to step down battery voltage for the motor/control circuits. 
-                        The goal was to improve runtime, reduce heat, and stabilize supply rails so the car maintains consistent speed and responsiveness as the battery discharges. Control signals are sent from a mobile app to the onboard receiver and motor driver ICs for precise movement.</p>
-                    <!-- Key Methods / Tools -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
-                        <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Buck converter (step-down DC-DC) </li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">DC motors and Motor driver ICs</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Power budgeting (efficiency & thermal checks)</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Chassis assembly ICs</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping </li>
-                        </ul>
-                    </div>
-                          <!-- Highlights -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
-                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Converts higher battery voltage (e.g., 7.4–12 V) down to optimal motor/logic rails (e.g., 5 V/3.3 V) with 85–95% efficiency.</li>
-                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
-                        </ul>
-                    </div>
-          <a href="Project_report/Project_Report_4.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1">
+            Buck Converter for Power Management in RC Cars
+          </h3>
+          <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            Undergraduate Project
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            Integrated a buck converter into a Bluetooth RC car to improve efficiency and runtime.
+          </p>
+
+          <button
+            class="project-toggle-btn inline-flex items-center text-xs font-semibold bg-blue-600 text-white px-3 py-1.5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+            View details
+          </button>
+
+          <div class="project-details mt-4 hidden">
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Built a low-cost Bluetooth-controlled RC car and added a buck converter to step down
+              battery voltage for motors and logic. This improved runtime, reduced heat, and stabilized
+              supply rails for consistent speed and responsiveness.
+            </p>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Buck Converter (DC–DC)</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">DC Motors & Driver ICs</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Power Budgeting & Thermal Checks</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Chassis Assembly</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Circuit Simulation & Prototyping</li>
+              </ul>
+            </div>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+              <ul class="mt-2 list-disc pl-4 text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Efficiently converted higher battery voltage to stable 5 V/3.3 V rails.</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a href="Project_report/Project_Report_4.pdf" target="_blank"
+                 class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+                Project Report
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Project 5 -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-        <div class="h-48 overflow-hidden">
+      <div class="project-card min-w-[260px] max-w-sm bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-40 overflow-hidden">
           <img src="img/project_5.jpg" alt="Project 5" class="w-full h-full object-cover transition duration-500 hover:scale-110">
         </div>
-             <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Designing a 1-Bit 4-to-1 Multiplexer Using 1-Bit 2-to-1 Multiplexers</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Designed a digital circuit for a 1-bit, 4-to-1 multiplexer (MUX) by combining multiple 1-bit, 2-to-1 MUX units. 
-                        The project demonstrates how complex circuits can be built from simpler components to optimize data routing. 
-                        Cadence Virtuoso was used to create the schematic and simulate the design, including transient analysis, DRC, and LVS checks.</p>
-                    <!-- Key Methods / Tools -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
-                        <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Cadence Virtuoso </li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">2-to-1 MUX circuit design</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200"> Schematic entry</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Transient analysis</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">DRC (Design Rule Check) & LVS (Layout vs. Schematics) </li>
-                        </ul>
-                    </div>
-                          <!-- Highlights -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
-                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Showcased hierarchical digital design by constructing a 4-to-1 MUX from simpler 2-to-1 blocks.</li>
-                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
-                        </ul>
-                    </div>
-          <a href="Project_report/Project_Report_5.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1">
+            1-Bit 4-to-1 MUX Using 2-to-1 MUXes
+          </h3>
+          <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            Undergraduate Project
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            Hierarchical digital design of a 4-to-1 multiplexer using 2-to-1 MUX blocks in Cadence Virtuoso.
+          </p>
+
+          <button
+            class="project-toggle-btn inline-flex items-center text-xs font-semibold bg-blue-600 text-white px-3 py-1.5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+            View details
+          </button>
+
+          <div class="project-details mt-4 hidden">
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Designed a 1-bit, 4-to-1 multiplexer by combining multiple 1-bit, 2-to-1 MUX units,
+              demonstrating how complex routing logic can be constructed from simpler building blocks.
+              Used Cadence Virtuoso for schematic and transient analysis, including DRC and LVS.
+            </p>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Cadence Virtuoso</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">2-to-1 MUX Design</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Schematic Entry</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Transient Analysis</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">DRC & LVS</li>
+              </ul>
+            </div>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+              <ul class="mt-2 list-disc pl-4 text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Showcased hierarchical digital circuit composition.</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a href="Project_report/Project_Report_5.pdf" target="_blank"
+                 class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+                Project Report
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Project 6 -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-        <div class="h-48 overflow-hidden">
+      <div class="project-card min-w-[260px] max-w-sm bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+        <div class="h-40 overflow-hidden">
           <img src="img/project_6.jpg" alt="Project 6" class="w-full h-full object-cover transition duration-500 hover:scale-110">
         </div>
-                   <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Designing the Physical Layout of a 2-to-1 Multiplexer and Verifying with DRC, ERC, and LVS</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">Undergraduate Project</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4 ">Developed the physical layout of a 2-to-1 multiplexer (MUX) using industry-standard EDA tools as an extension of the earlier schematic design. The project focused on translating logical design into a physical circuit layout while ensuring compliance with fabrication constraints. 
-                        Verification was carried out through Design Rule Check (DRC), Electrical Rule Check (ERC), and Layout vs. Schematic (LVS) to validate accuracy and functionality.</p>
-                    <!-- Key Methods / Tools -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4> Cadence Virtuoso, Physical design workflows, DRC, ERC, LVS, Layout design
-                        <ul class="mt-2 flex flex-wrap gap-2">
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Cadence Virtuoso </li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Physical design workflows</li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200"> DRC (Design Rule Check), LVS (Layout vs. Schematics) & ERC (Electrical Rule Check) </li>
-                        <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-200">Layout design</li>
-                        
-                        </ul>
-                    </div>
-                          <!-- Highlights -->
-                    <div class="mt-5">
-                        <h4 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
-                        <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Designed a fabrication-ready physical layout of a 2-to-1 MUX.</li>
-                       <!--  <li>Gained hands-on experience in synchronous cascading counter design, digital display systems, and hardware integration with timer circuits.</li>-->
-                        </ul>
-                    </div>
-          <a href="Project_report/Project_Report_6.pdf" target="_blank" class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">Project Report</a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold mb-1">
+            Physical Layout of a 2-to-1 MUX with DRC/ERC/LVS
+          </h3>
+          <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
+            Undergraduate Project
+          </p>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            Fabrication-ready layout of a 2-to-1 multiplexer using industry EDA tools and full verification.
+          </p>
+
+          <button
+            class="project-toggle-btn inline-flex items-center text-xs font-semibold bg-blue-600 text-white px-3 py-1.5 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+            View details
+          </button>
+
+          <div class="project-details mt-4 hidden">
+            <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Developed the physical layout of a 2-to-1 MUX, translating logical design into layout while
+              respecting fabrication constraints. Verification included Design Rule Check (DRC),
+              Electrical Rule Check (ERC), and Layout vs. Schematic (LVS).
+            </p>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Key Methods / Tools</h4>
+              <ul class="mt-2 flex flex-wrap gap-2">
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Cadence Virtuoso</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Physical Design Workflow</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">DRC / ERC / LVS</li>
+                <li class="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 px-2 py-1 text-[11px] text-gray-700 dark:text-gray-200">Layout Design</li>
+              </ul>
+            </div>
+
+            <div class="mt-3">
+              <h4 class="text-xs font-semibold text-gray-900 dark:text-gray-100">Highlights</h4>
+              <ul class="mt-2 list-disc pl-4 text-xs text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Produced a fabrication-ready, verified layout for a digital building block.</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <a href="Project_report/Project_Report_6.pdf" target="_blank"
+                 class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+                Project Report
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+
 
 <!--Publications Section-->
 
@@ -796,8 +939,8 @@ Remote Control Car</h3>
           <div class="flex flex-wrap gap-2">
             <!-- Replace with your thesis PDF link -->
             <a href="Publication_Papers\Capstone_project_book.pdf" target="_blank"
-              class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
-              View Thesis Paper
+              class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+              View PDF
             </a>
           </div>
         </div>
@@ -832,8 +975,8 @@ Remote Control Car</h3>
             </a>
             <local PDF>
             <a href="Publication_Papers\An 87.25 dB Open-Loop Gain, 2.09 GHz Unity Gain Bandwidth 3-Stage Operational Amplifier Implemented Using 45nm Technology.pdf" target="_blank"
-              class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs px-3 py-1 rounded-full">
-              Download PDF
+              class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+              View PDF
             </a>
           </div>
         </div>
@@ -1087,6 +1230,17 @@ Remote Control Car</h3>
         <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 7th & 8th OCtober, 2021 </p></div>
       </div>
 
+      <!-- C++: -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements\ESAB\Workshop\Extra\C++.jpg" target="_blank">
+            <img src="Achievements\ESAB\Workshop\Extra\C++.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">C++: Everything You Need to Know </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 30th October, 2021 </p></div>
+      </div>
+
       <!-- Arduino -->
       <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
         <div class="h-48 overflow-hidden">
@@ -1109,6 +1263,17 @@ Remote Control Car</h3>
         <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 26th February, 2022</p></div>
       </div>
 
+      <!--  Nanotechnology and Fourth Industrial Revolution -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements\ESAB\Workshop\Extra\solar_pv.jpg" target="_blank">
+            <img src="Achievements\ESAB\Workshop\Extra\solar_pv.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Nanotechnology and Fourth Industrial Revolution</p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 3rd August, 2022 </p></div>
+      </div>
+
       <!-- Research Paper Editing -->
       <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
         <div class="h-48 overflow-hidden">
@@ -1120,15 +1285,15 @@ Remote Control Car</h3>
         <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 18th September, 2022</p></div>
       </div>
 
-      <!-- Industrial Automation -->
+      <!--  Introduction to VLSI Industry -->
       <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
         <div class="h-48 overflow-hidden">
-          <a href="Achievements/ESAB/Workshop/Industrial Automation Project and Career .jpg" target="_blank">
-            <img src="Achievements/ESAB/Workshop/Industrial Automation Project and Career .jpg" alt="Industrial Automation" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <a href="Achievements\ESAB\Workshop\Extra\solar_pv.jpg" target="_blank">
+            <img src="Achievements\ESAB\Workshop\Extra\solar_pv.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
           </a>
         </div>
-        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Industrial Automation Project and Career</p>
-        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 20th OCtober, 2022 </p></div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Introduction to VLSI Industry</p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 27th September, 2022 </p></div>
       </div>
 
       <!-- Academic CV & SOP -->
@@ -1142,6 +1307,51 @@ Remote Control Car</h3>
         <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 16th OCtober, 2022</p></div>
       </div>
 
+      <!-- Industrial Automation -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements/ESAB/Workshop/Industrial Automation Project and Career .jpg" target="_blank">
+            <img src="Achievements/ESAB/Workshop/Industrial Automation Project and Career .jpg" alt="Industrial Automation" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Industrial Automation Project and Career</p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 20th OCtober, 2022 </p></div>
+      </div>
+
+      
+      <!--  Solar PV Energy -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements\ESAB\Workshop\Extra\solar_pv.jpg" target="_blank">
+            <img src="Achievements\ESAB\Workshop\Extra\solar_pv.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Solar PV Energy Towards Carbon Neutrality by 2050</p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 7th November, 2022 </p></div>
+      </div>
+    
+      <!--  Fourth Industrial Revolution: -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements\ESAB\Workshop\Extra\Fourth_Industrial_Revolution.jpg" target="_blank">
+            <img src="Achievements\ESAB\Workshop\Extra\Fourth_Industrial_Revolution.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Prospect and Challenges of Fourth Industrial Revolution: Are We Ready? </p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 14th November, 2022 </p></div>
+      </div>
+
+      <!--  Hybrid Perovskite Solar Cells -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements\ESAB\Workshop\Extra\Hybrid_Perovskite_Solar_Cells.jpg" target="_blank">
+            <img src="Achievements\ESAB\Workshop\Extra\Hybrid_Perovskite_Solar_Cells.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Progress and Stability Enhancement of Hybrid Perovskite Solar Cells: Opportunities and Challenges</p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 9th August, 2023 </p></div>
+      </div>
+
       <!-- Hybrid Energy Systems -->
       <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
         <div class="h-48 overflow-hidden">
@@ -1151,6 +1361,17 @@ Remote Control Car</h3>
         </div>
         <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Modeling and Performance Analysis of Hybrid Energy Systems Using PSCAD Software </p>
         <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 19th October, 2023 </p></div>
+      </div>
+
+      <!--  Offshore Wind Energy -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements\ESAB\Workshop\Extra\Offshore_wind.jpg" target="_blank">
+            <img src="Achievements\ESAB\Workshop\Extra\Offshore_wind.jpg" alt="Hybrid Energy" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">Offshore Wind Energy: From Wind Turbines to Wind Farms</p>
+        <p class="text-gray-700 dark:text-gray-300 font-medium">Date: 10th December, 2023 </p></div>
       </div>
 
       <!-- Robotics -->
@@ -1166,8 +1387,6 @@ Remote Control Car</h3>
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -1380,6 +1599,28 @@ Remote Control Car</h3>
     });
   });
 
+
+  <!-- Toggle script -->
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.project-toggle-btn');
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const card = btn.closest('.project-card');
+        const details = card.querySelector('.project-details');
+
+        if (!details) return;
+
+        const isHidden = details.classList.contains('hidden');
+        details.classList.toggle('hidden');
+
+        btn.textContent = isHidden ? 'Hide details' : 'View details';
+      });
+    });
+  });
+
+  
 
     </script>
 </body>
