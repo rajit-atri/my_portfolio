@@ -907,88 +907,116 @@
     <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in delay-1">Some of my recent work</p>
   </div>
 
-  <div class="relative">
-    <!-- Slider Buttons -->
-    <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg z-10">
-      <i class="fas fa-chevron-right"></i>
-    </button>
+  <div id="projectsSlider" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
 
-     <!--Slider Container -->
-    <!-- Slider Container -->
-    <div id="projectsSlider" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
-      <!-- Publication 1: Undergraduate Capstone Project -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-       <!-- <div class="h-48 overflow-hidden">
-          <img src="img/pub_thesis.jpg" alt="Undergraduate Thesis" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-        </div> -->
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-1">Undergraduate Capstone Project</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">2024 · Electrical & Electronic Engineering</p>
+    <!-- Publication 1: WIECON-ECE 2025 -->
+    <div class="project-card min-w-[380px] md:min-w-[420px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-1">IEEE Conference Paper</h3>
 
-          <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
-            <span class="font-semibold">Title:</span>
-            Image Processing-Based Water Meter Reading System
-          </p>
-          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
-            Developed an automated water-meter reading system using Python, OpenCV, image segmentation, and OCR to recognize meter digits and reduce manual monitoring effort.
-          </p>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">
+          WIECON-ECE 2025 · IEEE International Women in Engineering Conference
+        </p>
 
-          <div class="flex flex-wrap gap-2">
-            <!-- Replace with your thesis PDF link -->
-            <a href="Publication_Papers\Capstone_project_book.pdf" target="_blank"
-              class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
-              View PDF
-            </a>
-          </div>
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+          <span class="font-semibold">Title:</span>
+          Digitizing Conventional Water Meter Readings in Bangladesh Using a Scalable OCR-Based Extension Module
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+          <span class="font-semibold">Authors:</span>
+          R. P. Atri, M. I. Ishrak, R. Sultana, L. Akter, A. Ahmed, M. R. Hazari, M. S. R. Zishan
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+          Developed a scalable OCR-based extension module for conventional water meters in Bangladesh. The system combines image processing and OCR techniques to automate meter reading, improve data collection accuracy, and support future IoT-enabled smart utility management.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          <a href="https://doi.org/10.1109/WIECON-ECE69386.2025.11526550"
+            target="_blank"
+            class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+            View on IEEE (DOI)
+          </a>
+
+          <!-- Replace the filename with your uploaded PDF name -->
+          <a href="Publication_Papers/Digitizing_Conventional_Water_Meter_Readings_WIECON_2025.pdf"
+            target="_blank"
+            class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+            View PDF
+          </a>
         </div>
       </div>
-
-      <!-- Publication 2: IEEE Conference Paper -->
-      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
-       <!-- <div class="h-48 overflow-hidden">
-          <img src="img/pub_ieee.jpg" alt="IEEE Conference Paper" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-        </div>  -->
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-1">IEEE Conference Paper</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">ICEEICT 2024 · Dhaka, Bangladesh</p>
-
-          <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
-            <span class="font-semibold">Title:</span>
-            An 87.25 dB Open-Loop Gain, 2.09 GHz Unity Gain Bandwidth 3-Stage Operational Amplifier Implemented Using 45 nm Technology
-          </p>
-          <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
-            <span class="font-semibold">Authors:</span>
-            R. V. Biswas, R. Sultana, M. I. Ishrak, R. P. Atri, M. H. Ahanaf
-          </p>
-          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
-            Designed and analyzed a high-gain, high-bandwidth three-stage operational amplifier using 45 nm CMOS technology, including stability and performance evaluations.
-          </p>
-
-          <div class="flex flex-wrap gap-2">
-            <!-- Replace with your actual paper/IEEE link -->
-            <a href="https://ieeexplore.ieee.org/abstract/document/10534387" target="_blank"
-              class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
-              View on IEEE (DOI)
-            </a>
-            <local PDF>
-            <a href="Publication_Papers\An 87.25 dB Open-Loop Gain, 2.09 GHz Unity Gain Bandwidth 3-Stage Operational Amplifier Implemented Using 45nm Technology.pdf" target="_blank"
-              class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
-              View PDF
-            </a>
-          </div>
-        </div>
-      </div>
-
-      
-      <!-- Add more publication cards here if needed -->
-
     </div>
 
+    <!-- Publication 2: IEEE Conference Paper -->
+    <div class="project-card min-w-[380px] md:min-w-[420px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-1">IEEE Conference Paper</h3>
 
-  </div>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">
+          ICEEICT 2024 · Dhaka, Bangladesh
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+          <span class="font-semibold">Title:</span>
+          An 87.25 dB Open-Loop Gain, 2.09 GHz Unity Gain Bandwidth 3-Stage Operational Amplifier Implemented Using 45 nm Technology
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+          <span class="font-semibold">Authors:</span>
+          R. V. Biswas, R. Sultana, M. I. Ishrak, R. P. Atri, M. H. Ahanaf
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+          Designed and analyzed a high-gain, high-bandwidth three-stage operational amplifier using 45 nm CMOS technology, including stability and performance evaluations.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          <a href="https://ieeexplore.ieee.org/abstract/document/10534387"
+            target="_blank"
+            class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+            View on IEEE (DOI)
+          </a>
+
+          <a href="Publication_Papers/An 87.25 dB Open-Loop Gain, 2.09 GHz Unity Gain Bandwidth 3-Stage Operational Amplifier Implemented Using 45nm Technology.pdf"
+            target="_blank"
+            class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+            View PDF
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publication 3: Undergraduate Capstone Project -->
+    <div class="project-card min-w-[380px] md:min-w-[420px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition duration-300 snap-center">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-1">Undergraduate Capstone Project</h3>
+
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">
+          2024 · Electrical & Electronic Engineering
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+          <span class="font-semibold">Title:</span>
+          Image Processing-Based Water Meter Reading System
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+          Developed an automated water-meter reading system using Python, OpenCV, image segmentation, and OCR to recognize meter digits and reduce manual monitoring effort.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          <a href="Publication_Papers/Capstone_project_book.pdf"
+            target="_blank"
+            class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-200 text-xs px-3 py-1 rounded-full">
+            View PDF
+          </a>
+        </div>
+      </div>
+    </div>
+
+</div>
 </section>
 
     
@@ -1049,6 +1077,15 @@
     </div>
 
     <div id="achRow2" class="flex overflow-x-auto space-x-6 scroll-smooth snap-x snap-mandatory scrollbar-hide">
+      <!-- Data Science -->
+      <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
+        <div class="h-48 overflow-hidden">
+          <a href="Achievements\Autocad\Data Science and Machine Learning with Python and R.JPG" target="_blank">
+            <img src="Achievements\Autocad\Data Science and Machine Learning with Python and R.JPG" alt="AutoCAD" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          </a>
+        </div>
+        <div class="p-6"> <p class="text-gray-700 dark:text-gray-300 font-medium"> Data Solution 360 </p> <p class="text-sm text-gray-500 dark:text-gray-400 mt-1"> Data Science and Machine Learning with Python and R </p> </div>
+      </div>
       <!-- AutoCAD -->
       <div class="project-card min-w-[300px] bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg snap-center">
         <div class="h-48 overflow-hidden">
@@ -1056,7 +1093,8 @@
             <img src="Achievements/Autocad/certificate-1744925116058.jpg" alt="AutoCAD" class="w-full h-full object-cover hover:scale-110 transition duration-500">
           </a>
         </div>
-        <div class="p-6"><p class="text-gray-700 dark:text-gray-300 font-medium">AutoCAD Certificate - Gobeshona Learning Academy</p></div>
+        <div class="p-6"> <p class="text-gray-700 dark:text-gray-300 font-medium"> Gobeshona Learning Academy </p> <p class="text-sm text-gray-500 dark:text-gray-400 mt-1"> AutoCAD Electrical Design & Drafting </p> </div>
+        
       </div>
 
       <!-- ML/DL -->
